@@ -1,0 +1,68 @@
+#include<iostream>
+using namespace std;
+class rectangle
+
+{public:
+double length;
+double width;
+ 
+ public:
+ double get_data(double l,double w)
+ {
+    length=l;
+    width=w;
+    cout<<l<<w;
+ }
+ double display_data()
+ {
+    return 0;
+ }
+ private:
+ double area()
+ {
+    return(length*width);
+ }
+ public:
+ double perimeter();
+ 
+    void print_area()
+    {
+       cout<<"area"<<area();
+       cout<<"perimeter"<<perimeter();
+    }
+};  
+    double rectangle::perimeter()
+    {
+        return 2*(length+width);
+    }
+ 
+ int main()
+ {  
+    rectangle ob,ob1,ob2,ob3,ob4;
+    ob.get_data(10,20);
+    ob.display_data();
+    ob.perimeter();
+    ob.print_area();
+
+
+    ob1.get_data(50,60);
+    ob1.display_data();
+    ob1.perimeter();
+    ob1.print_area();
+
+    ob2.get_data(300,100);
+    ob2.display_data();
+    ob2.perimeter();
+    ob2.print_area();
+
+    ob3.get_data(400,100);
+    ob3.display_data();
+    ob3.perimeter();
+    ob3.print_area();
+
+    ob4.get_data(650,750);
+    ob4.display_data();
+    ob4.perimeter();
+    ob4.print_area();
+ }
+ 
